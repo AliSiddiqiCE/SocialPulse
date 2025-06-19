@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 210 11% 15%; /* #2C3E50 equivalent */
+  --muted: 210 17% 95%;
+  --muted-foreground: 210 6% 45%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 11% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 11% 15%;
+  --border: 210 12% 87%;
+  --input: 210 12% 87%;
+  --primary: 15 100% 55%; /* #FF5722 orange */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 210 17% 95%;
+  --secondary-foreground: 210 11% 15%;
+  --accent: 210 17% 95%;
+  --accent-foreground: 210 11% 15%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 15 100% 55%;
+  --radius: 0.5rem;
+  --chart-1: 15 100% 55%; /* Orange */
+  --chart-2: 210 90% 54%; /* Blue */
+  --chart-3: 340 75% 47%; /* Pink */
+  --chart-4: 270 95% 60%; /* Purple */
+  --chart-5: 142 76% 36%; /* Green */
+  
+  /* Custom EXL colors */
+  --navy: 210 11% 15%; /* #2C3E50 */
+  --orange: 15 100% 55%; /* #FF5722 */
+  --light-gray: 210 17% 98%; /* #F8F9FA */
+}
+
+.dark {
+  --background: 210 11% 6%;
+  --foreground: 0 0% 98%;
+  --muted: 210 7% 15%;
+  --muted-foreground: 210 5% 65%;
+  --popover: 210 11% 6%;
+  --popover-foreground: 0 0% 98%;
+  --card: 210 11% 6%;
+  --card-foreground: 0 0% 98%;
+  --border: 210 7% 15%;
+  --input: 210 7% 15%;
+  --primary: 15 100% 55%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 210 7% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 210 7% 15%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 31%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 15 100% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  .bg-navy {
+    background-color: hsl(var(--navy));
+  }
+  
+  .text-navy {
+    color: hsl(var(--navy));
+  }
+  
+  .bg-orange {
+    background-color: hsl(var(--orange));
+  }
+  
+  .text-orange {
+    color: hsl(var(--orange));
+  }
+  
+  .bg-light-gray {
+    background-color: hsl(var(--light-gray));
+  }
+  
+  .border-orange {
+    border-color: hsl(var(--orange));
+  }
+  
+  .ring-orange {
+    --tw-ring-color: hsl(var(--orange));
+  }
+  
+  .focus\:ring-orange:focus {
+    --tw-ring-color: hsl(var(--orange));
+  }
+  
+  .hover\:bg-orange-600:hover {
+    background-color: hsl(15 100% 48%);
+  }
+}
