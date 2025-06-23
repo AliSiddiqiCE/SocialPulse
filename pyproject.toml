@@ -1,0 +1,17 @@
+[project]
+name = "RetailSocialPulse"
+version = "0.1.0"
+description = "Social media analytics for retail"
+requires-python = ">=3.8"
+dependencies = [
+    "pandas>=2.3.0",
+    "psycopg2-binary>=2.9.10",
+    "sqlalchemy>=2.0.41",
+    "textblob>=0.17.1",
+    "flask>=2.0.1",
+    "python-dotenv>=0.19.0",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
